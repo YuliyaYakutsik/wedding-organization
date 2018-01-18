@@ -1,0 +1,12 @@
+mixin owlCarousel
+    +b('div').owl-navigation
+        +e('a').link(href='#', class='owl-navigation__link_prev')
+            +e('img').picture(src='images/ico-arrow-left.svg')
+        +e('div').pager
+            +e('span').active-page
+                |1&nbsp;
+            |/
+            +e('span').all-pages
+                |&nbsp;2
+        +e('a').link(href='#', class='owl-navigation__link_next')
+            +e('img').picture(src='images/ico-arrow-right.svg')

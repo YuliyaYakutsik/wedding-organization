@@ -1,0 +1,51 @@
+block header
+    include ../menu/menu
+
+    mixin header
+        +b('header').header
+            +e('div').wrapper
+                +e('div').content
+                    +e('div').preview
+                        +e('a').preview__link(href='#main')
+                            +e('div').preview__picture
+                                +e('img')(src='images/vis-evgenia.jpg')
+                            +e('div').preview__content
+                                +e('div').preview__title
+                                    |Свадебный организатор
+                                +e('div').preview__name
+                                    |Евгения Мельникова
+                        +e('a').preview__call(href='tel:+375293313959')
+                            +e('img').preview__call__picture(src='images/ico-phone.svg')
+                    +e('div').menu
+                        +menu({
+                            list: [
+                                {
+                                    text: 'Обо мне',
+                                    hash: 'about',
+                                    isActive: false
+                                },
+                                {
+                                    text: 'Преимущества',
+                                    hash: 'advantages',
+                                    isActive: false
+                                },
+                                {
+                                    text: 'Шаги',
+                                    hash: 'steps',
+                                    isActive: false
+                                },
+                                {
+                                    text: 'Отзывы',
+                                    hash: 'reviews',
+                                    isActive: false
+                                },
+                                {
+                                    text: 'Контакты',
+                                    hash: 'contacts',
+                                    isActive: false
+                                }
+                            ]
+                        })
+                    +e('div').burger-menu
+                        +e('a').burger-menu__link(href='#')
+                            +e('span').burger-menu__link-center

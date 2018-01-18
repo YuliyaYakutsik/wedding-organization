@@ -1,0 +1,156 @@
+@import '../iconBlock/iconBlock';
+@import '../owlCarousel/owlCarousel';
+
+$steps: '.steps';
+
+#{$steps} {
+    @include blockDefault;
+    padding: 85px 0;
+
+    @include respond-to('increased') {
+        padding: 65px 0;
+    }
+
+   @include respond-to('medium') {
+        padding: 35px 0;
+    }
+
+    &__wrapper {
+        @include blockPaddingHorizontal;
+
+        @include respond-to('preincreased') {
+            padding: 0;
+        }
+
+        @include respond-to('medium') {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 81px;
+
+        @include respond-to('preincreased') {
+            padding: 0 40px;
+            margin-bottom: 55px;
+        }
+
+        @include respond-to('medium') {
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        padding-right: 40px;
+        padding-left: 90px;
+        margin: 0;
+        @include clearfix;
+
+        @include respond-to('preincreased') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-left: 40px;
+            padding-right: 0;
+        }
+
+        @include respond-to('medium') {
+            padding-left: 20px;
+        }
+
+        &.owl-carousel {
+            padding-left: 40px;
+            padding-right: 0;
+
+            @include respond-to('medium') {
+                padding-left: 20px;
+            }
+
+            #{$steps}__item {
+
+                #{$iconBlock}__line {
+                    display: block;
+                }
+            }
+        }
+
+        .owl-dots {
+            display: none;
+        }
+    }
+
+    &__item {
+        @include gallery(4);
+        padding-right: 10px;
+        counter-increment: item;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 100px;
+        position: relative;
+
+        @include f-last(1) {
+
+            #{$iconBlock}__line {
+                display: none;
+            }
+        }
+
+        @include respond-to('preincreased') {
+            @include gallery(12);
+            float: none !important;
+            clear: both !important;
+            width: 280px;
+            margin-bottom: 70px;
+        }
+
+        @include respond-to('medium') {
+            width: 215px;
+        }
+
+        #{$iconBlock}__line {
+            display: none;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        position: relative;
+        top: -15px;
+        font-size: $font-size-premedium;
+        margin-bottom: 0;
+
+        @include respond-to('preincreased') {
+            padding: 0 40px;
+        }
+
+        @include respond-to('increased') {
+            font-size: $font-size-default;
+        }
+
+        @include respond-to('medium') {
+            padding: 0 20px;
+        }
+    }
+
+    .owl-item {
+        #{$iconBlock}_type_steps {
+
+            #{$iconBlock}__line {
+                display: block;
+            }
+        }
+
+        @include f-last(1) {
+
+            #{$iconBlock}_type_steps {
+
+                #{$iconBlock}__line {
+                    display: none;
+                }
+            }
+        }
+    }
+}

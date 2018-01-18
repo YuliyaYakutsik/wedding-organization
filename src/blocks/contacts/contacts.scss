@@ -1,0 +1,81 @@
+$contacts: '.contacts';
+
+#{$contacts} {
+    @include blockDefault;
+    padding-top: 85px;
+
+    @include respond-to('increased') {
+        padding-top: 65px;
+    }
+
+    @include respond-to('medium') {
+        padding-top: 35px;
+    }
+
+    &__title {
+        text-align: center;
+        @include blockPaddingHorizontal;
+        margin-bottom: 40px;
+
+        @include respond-to('increased') {
+            font-size: $font-size-largeplus*0.8;
+            margin-bottom: 50px;
+        }
+
+        @include respond-to('premedium') {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-white;
+        border-radius: 8px;
+        padding: 24px 40px;
+    }
+
+    &__info__pin {
+        position: absolute;
+        width: 25px;
+        top: -5px;
+
+        &_right {
+            right: 5px;
+        }
+
+        &_left {
+            left: 5px;
+            transform: scaleX(-1);
+        }
+    }
+
+    &__info__title {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-size: $font-size-premedium;
+        font-family: $font-family-bold;
+        text-align: center;
+    }
+
+    &__list {
+        @include clearfix;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 15px;
+
+        @include f-last(1) {
+            margin-bottom: 0;
+        }
+    }
+}

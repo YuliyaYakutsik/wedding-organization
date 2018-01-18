@@ -1,0 +1,13 @@
+block advantages
+    include ../../jade/mixins/advantages-list
+
+    mixin advantages(data)
+        - var advantagesData = data ? data : {};
+
+        +b('section').advantages(data-section="advantages")
+            +e('div').wrapper
+                +e('div').content
+                    +e('h2').title!= advantagesData.title
+                    +e('ul').list
+                        each item in advantagesData.list
+                            +advantages-list(item)

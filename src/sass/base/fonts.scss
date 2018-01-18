@@ -1,0 +1,54 @@
+/* lato */
+$fonts_dir: '../fonts/lato';
+
+/* fontawesome */
+$fonts_awe: '../fonts/fontawesome';
+
+/* black */
+@font-face {
+    font-family: 'lato_black';
+    src: url('#{$fonts_dir}/black/lato-black-webfont.eot');
+    src: url('#{$fonts_dir}/black/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts_dir}/black/lato-black-webfont.svg#latoblack') format('svg'),
+    url('#{$fonts_dir}/black/lato-black-webfont.woff') format('woff'),
+    url('#{$fonts_dir}/black/lato-black-webfont.woff2') format('woff2'),
+    url('#{$fonts_dir}/black/lato-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* regular */
+@font-face {
+    font-family: 'lato_regular';
+    src: url('#{$fonts_dir}/regular/lato-regular-webfont.eot');
+    src: url('#{$fonts_dir}/regular/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts_dir}/regular/lato-regular-webfont.svg#latoregular') format('svg'),
+    url('#{$fonts_dir}/regular/lato-regular-webfont.woff') format('woff'),
+    url('#{$fonts_dir}/regular/lato-regular-webfont.woff2') format('woff2'),
+    url('#{$fonts_dir}/regular/lato-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* bold */
+@font-face {
+    font-family: 'lato_bold';
+    src: url('#{$fonts_dir}/bold/lato-bold-webfont.eot');
+    src: url('#{$fonts_dir}/bold/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts_dir}/bold/lato-bold-webfont.svg#latobold') format('svg'),
+    url('#{$fonts_dir}/bold/lato-bold-webfont.woff') format('woff'),
+    url('#{$fonts_dir}/bold/lato-bold-webfont.woff2') format('woff2'),
+    url('#{$fonts_dir}/bold/lato-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* fontawesome */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$fonts_awe}/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+       url('#{$fonts_awe}/fontawesome-webfont.ttf') format('woff'),
+       url('#{$fonts_awe}/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

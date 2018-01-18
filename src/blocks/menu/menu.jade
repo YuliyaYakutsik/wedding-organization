@@ -1,0 +1,8 @@
+mixin menu(data)
+    - var menuData = data;
+
+    +b('div').menu
+        +e('ul').list
+            each item in menuData.list
+                +e('li').item(class=(item.isActive ? 'menu__item_active' : ''))
+                    +e('a').link(href=`#${item.hash}`)!= item.text

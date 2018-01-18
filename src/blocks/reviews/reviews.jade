@@ -1,0 +1,16 @@
+block reviews
+    include ../../jade/mixins/reviews-list
+
+    mixin reviews(data)
+        - var reviewsData = data ? data : {title: 'Here goes title', image: ''};
+
+        +b('section').reviews(data-section="reviews")
+            +e('h2').title!= reviewsData.title
+            +e('ul').list
+                each item, index in reviewsData.list
+                    +reviews-list(item, index)
+            each item, index in reviewsData.list
+                +b('div').full-review(id=`full-review-${index}`)
+                    +e('div').inner
+                        +e('div').title!= item.title
+                        +e('div').content!= item.fulltext

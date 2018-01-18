@@ -1,0 +1,14 @@
+mixin footer
+    +b('footer').footer
+        +e('div').socials
+            +e('ul').socials__list
+                +e('li').socials__item
+                    +e('a').socials__link(href='https://vk.com/yauheniya_melnikava', target='_blank')
+                        i.fa.fa-vk(aria-hidden='true')
+                +e('li').socials__item
+                    +e('a').socials__link(href='https://www.facebook.com/yauheniya.melnikava', target='_blank')
+                        i.fa.fa-facebook(aria-hidden='true')
+        +e('div').content
+            i.fa.fa-heart(aria-hidden='true')
+            |&nbsp;Делаю с любовью!&nbsp;
+            i.fa.fa-heart(aria-hidden='true')

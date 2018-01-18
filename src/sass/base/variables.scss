@@ -1,0 +1,83 @@
+// Font-family
+$font-family-bold: 'lato_bold', Arial, Helvetica, sans-serif;
+$font-family-regular: 'lato_regular', Arial, Helvetica, sans-serif;
+$font-family-black: 'lato_black', Arial, Helvetica, sans-serif;
+
+// Font-size
+$font-size-prelittle: 8px;
+$font-size-little: 10px;
+$font-size-smallest: 11px;
+$font-size-extrasmall: 12px;
+$font-size-smaller: 13px;
+$font-size-small: 14px;
+$font-size-predefault: 15px;
+$font-size-default: 16px;
+$font-size-premedium: 18px;
+$font-size-medium: 20px;
+$font-size-mediumplus: 22px;
+$font-size-prelarge: 24px;
+$font-size-semilarge: 28px;
+$font-size-large: 34px;
+$font-size-ultralarge: 48px;
+$font-size-largeplus: 50px;
+$font-size-huge: 60px;
+$font-size-extrahuge: 90px;
+
+// Line-height
+$line-height-prelittle: 1;
+$line-height-little: 1.2;
+$line-height-presmall: 1.3;
+$line-height-small: 1.4;
+$line-height-medium: 1.5;
+$line-height-large: 1.6;
+$line-height-larger: 1.7;
+$line-height-afterlarge: 1.8;
+
+// Color
+$color-white: #FFFFFF;
+$color-white-two: #f5f5f5;
+$color-black: #333333;
+$color-alert-border: #fa5c70;
+
+$color-brownish-grey: #646464;
+$color-pale-grey: #f7f8fc;
+$color-pale-grey-two: #dfe3e8;
+$color-warm-grey: #969696;
+$color-cool-grey: #99a6ad;
+
+$color-azul: #FF7D8A;
+$color-azul-two: #2d7ded;
+$color-nice-blue: #135fc8;
+$color-very-light-blue: #e7f1ff;
+
+$color-watermelon: #fa4b60;
+
+// equal-margins
+$margin-about: 60px;
+
+// global
+$minWidth: 320px;
+
+// Breakpoints
+$breakpoints: (
+    'small' : (max-width: 480px),
+    'premedium': (max-width: 540px),
+    'medium': (max-width: 640px),
+    'prebig': (max-width: 767px),
+    'big': (max-width: 850px),
+    'intermediary': (max-width: 910px),
+    'increased': (max-width: 1023px),
+    'preincreased': (max-width: 1040px),
+    'huge': (max-width: 1290px),
+    'ultrahuge': (max-width: 1400px),
+    'premonsterhuge': (max-width: 1717px),
+    'monsterhuge': (max-width: 2000px)
+);
+
+// Grid
+$susy: (
+    columns: 12,
+    container: 1290px,
+    gutters: 1/4,
+    global-box-sizing: border-box
+);

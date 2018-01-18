@@ -1,0 +1,64 @@
+$reviews: '.reviews';
+
+#{$reviews} {
+    @include blockDefault;
+    padding-top: 85px;
+    background-color: $color-white;
+
+    @include respond-to('increased') {
+        padding-top: 65px;
+    }
+
+    @include respond-to('medium') {
+        padding-top: 35px;
+    }
+
+    &__title {
+        @include container;
+        @include blockPaddingHorizontal;
+        text-align: center;
+        margin-bottom: 73px;
+
+        @include respond-to('increased') {
+            margin-bottom: 50px;
+        }
+
+        @include respond-to('medium') {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        height: 100vh;
+        min-height: 670px;
+        margin: 0 auto;
+        padding: 0;
+        @include clearfix;
+
+        @include respond-to('increased') {
+            height: 200vh;
+            min-height: 975px;
+        }
+
+        @include respond-to('premedium') {
+            min-height: 2075px;
+        }
+    }
+
+    &__item {
+        height: 50%;
+        width: 25%;
+        float: left;
+        list-style-type: none;
+
+        @include respond-to('increased') {
+            height: 25%;
+            width: 50%;
+        }
+
+        @include respond-to('premedium') {
+            height: calc(100% / 8);
+            width: 100%;
+        }
+    }
+}

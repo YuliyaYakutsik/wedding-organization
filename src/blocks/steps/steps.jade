@@ -1,0 +1,16 @@
+block steps
+    include ../iconBlock/iconBlock
+    include ../owlCarousel/owlCarousel
+
+    mixin steps(data)
+        - var stepsData = data ? data : {title: 'Here goes title', list: []};
+
+        +b('section').steps(data-section="steps")
+            +e('div').wrapper
+                +e('h2').title!= stepsData.title
+                +e('div').content
+                    +e('ul').list
+                        each item, index in stepsData.list
+                            +iconBlock(item,  index)
+                    +owlCarousel
+                    +e('p').text!= stepsData.text

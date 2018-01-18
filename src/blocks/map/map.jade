@@ -1,0 +1,6 @@
+mixin map
+    - var jsonData = [];
+    - jsonData.push({lat: 53.934145, lng: 27.619334, title: 'Evgeniya Melnikova', address: 'Minsk City, Belarus'});
+    - var serverData = JSON.stringify(jsonData);
+
+    +b('div')#map.map(data-markers=serverData)

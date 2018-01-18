@@ -1,0 +1,29 @@
+$owl-navigation: '.owl-navigation';
+
+#{$owl-navigation} {
+    text-align: center;
+    display: none;
+    margin-top: 15px;
+    font-size: $font-size-default;
+
+    @include respond-to('medium') {
+        margin-top: 0;
+    }
+
+    &__pager {
+        display: inline;
+        padding: 0 35px;
+    }
+
+    &__link {
+
+        &.disabled {
+            opacity: .2;
+            pointer-events: none;
+        }
+    }
+
+    &#{$owl-navigation}_active {
+        display: block;
+    }
+}

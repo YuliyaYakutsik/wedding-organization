@@ -1,0 +1,19 @@
+$map: '.map';
+
+#{$map} {
+    width: 100%;
+    min-height: 575px;
+
+    @include respond-to('big') {
+        min-height: 450px;
+    }
+
+    &-info {
+        &__title {
+            font-family: $font-family-bold;
+            font-size: $font-size-small;
+            text-transform: upppercase;
+            margin-bottom: 7px;
+        }
+    }
+}

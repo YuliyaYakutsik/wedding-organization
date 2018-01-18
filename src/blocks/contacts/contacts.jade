@@ -1,0 +1,20 @@
+block contacts
+    include ../map/map
+
+    mixin contacts(data)
+        - var contactsData = data ? data : {title: 'Here goes title'};
+
+        +b('section').contacts(data-section="contacts")
+            +e('h2').title!= contactsData.title
+            +e('div').content
+                +map
+                +e('div').info
+                    +e('div').info__pin(class='contacts__info__pin_right')
+                        +e('img')(src='images/ico-pin-info.png')
+                    +e('div').info__pin(class='contacts__info__pin_left')
+                        +e('img')(src='images/ico-pin-info.png')
+                    +e('div').info__title
+                        |Жду встречи с Вами
+                    +e('ul').list
+                        each item in contactsData.contactsList
+                            +iconBlock(item)

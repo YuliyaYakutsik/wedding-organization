@@ -1,0 +1,15 @@
+block about
+    include ../iconBlock/iconBlock
+
+    mixin about(data)
+        - var aboutData = data ? data : {title: 'Here goes title', list: []};
+
+        +b('section').about(data-section="about")
+            +e('div').wrapper
+                +e('h2').title!= aboutData.title
+                +e('div').content
+                    +e('ul').list
+                        each item in aboutData.list
+                            +iconBlock(item)
+                    +e('div').preview
+                        +e('img').picture(src='images/vis-evgenia.jpg')

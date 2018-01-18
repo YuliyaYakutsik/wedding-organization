@@ -1,0 +1,26 @@
+$full-review: '.full-review';
+
+#{$full-review} {
+    display: none;
+    max-width: 520px;
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .fancybox-close-small {
+
+        &:hover:after {
+            color: $color-azul;
+        }
+
+        &:focus:after {
+            outline: none;
+        }
+
+        &:after {
+            color: $color-azul;
+        }
+    }
+}

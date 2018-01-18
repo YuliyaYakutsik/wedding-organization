@@ -1,0 +1,18 @@
+mixin iconBlock(data, index)
+    - var iconBlockData = data ? data : [];
+
+    +e('li').item(class='iconBlock', class= iconBlockData.type ? `iconBlock_type_${iconBlockData.type}` : '')
+        .iconBlock__picture
+            img.iconBlock__icon(src!= iconBlockData.image)
+        .iconBlock__description
+            if (iconBlockData.type == 'keyFacts')
+                .iconBlock__number!= iconBlockData.number
+                h5.iconBlock__text!= iconBlockData.text
+            if (iconBlockData.type == 'steps')
+                p.iconBlock__title!= iconBlockData.title
+            if (iconBlockData.type == 'contacts')
+                h6.iconBlock__title!= iconBlockData.title
+                p.iconBlock__text!= iconBlockData.text
+        if (iconBlockData.type == 'steps')
+            .iconBlock__counter-number!=index+1
+            .iconBlock__line

@@ -1,0 +1,92 @@
+$menu: '.menu';
+
+#{$menu} {
+
+    &__list {
+        text-align: center;
+        margin-bottom: 0;
+
+        @include respond-to('increased') {
+            padding: 0;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        list-style-type: none;
+        margin-left: 32px;
+        font-size: 13px;
+
+        @include respond-to('increased') {
+            display: block;
+            margin-left: 0;
+            margin-bottom: 50px;
+            font-size: $font-size-largeplus*0.6;
+        }
+
+        @include respond-to('medium') {
+            margin-bottom: 40px;
+            font-size: $font-size-default;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &#{$menu}__item_active {
+
+            #{$menu}__link {
+
+                &:after {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        display: block;
+        padding: 2px;
+        position: relative;
+
+        &:hover {
+            color: inherit;
+
+            &:before {
+                left: 0;
+                width: 50%;
+            }
+
+            &:after {
+                width: 50%;
+            }
+        }
+
+        @include respond-to('increased') {
+            color: $color-white;
+            display: inline;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0%;
+            height: 2px;
+            background-color: $color-azul;
+            @include transition(all);
+
+            @include respond-to('increased') {
+                background-color: $color-white;
+            }
+        }
+    }
+}

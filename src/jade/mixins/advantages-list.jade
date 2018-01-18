@@ -1,0 +1,6 @@
+mixin advantages-list(item)
+    +e('li').item
+        +e('div').item__picture
+            +e('img').pic(src!= item.image, alt='logo')
+        +e('h4').item__title!= item.title
+        +e('p').item__text!= item.text

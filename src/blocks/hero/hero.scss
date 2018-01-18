@@ -1,0 +1,62 @@
+$hero: '.hero';
+
+#{$hero} {
+    padding-top: 64px;
+    height: 100%;
+    @include blockDefault;
+    position: relative;
+
+    @include respond-to('increased') {
+        height: auto;
+        padding-top: 54px;
+    }
+
+    &__background {
+        background: url('../images/vis-reviews-8.jpg') no-repeat center center;
+        background-size: cover;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+
+        @include respond-to('increased') {
+            min-height: 461px;
+        }
+
+        @include respond-to('medium') {
+            min-height: 342px;
+        }
+    }
+
+    &__wrapper {
+        @include blockPaddingHorizontal;
+    }
+
+    &__content {
+        padding-top: 58px;
+        padding-bottom: 72px;
+
+        @include respond-to('preincreased') {
+            padding: 110px 0;
+        }
+
+        @include respond-to('medium') {
+            padding-top: 79px;
+            padding-bottom: 83px;
+        }
+    }
+
+    &__title {
+        width: span(7);
+        text-shadow: 0 12px 55px rgba(37, 37, 37, 0.71);
+        color: $color-white;
+
+        @include respond-to('intermediary') {
+            width: span(9);
+        }
+
+        @include respond-to('small') {
+            width: span(12);
+            padding-right: 10px;
+        }
+    }
+}
