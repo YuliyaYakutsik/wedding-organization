@@ -1,7 +1,0 @@
-mixin territory-list(item)
-    +e('li').subitem(class="territory-subitem")
-        +e('div').subitem__content
-            +e('div').subitem__picture
-                +e('img').subitem__image(src=`${item.image}`)
-            +e('div').subitem__title!= item.title
-

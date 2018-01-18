@@ -68,7 +68,7 @@
 
             let markers = $('.map').data('markers');
             let image = {
-                url: '../images/vis-pin-map.png'
+                url: 'images/vis-pin-map.png'
             };
             let markersArray = [];
             let infoWindowArray = [];

@@ -1,6 +1,0 @@
-mixin benefits-list(item)
-    +e('li').subitem(class="benefits-subitem")
-        +e('div').subitem__content
-            +e('div').subitem__picture
-                +e('img').subitem__image(src=`${item.image}`)
-            +e('h4').subitem__title!= item.title

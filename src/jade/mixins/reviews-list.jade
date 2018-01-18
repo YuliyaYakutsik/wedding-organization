@@ -1,7 +1,7 @@
 mixin reviews-list(item, index)
     +e('li').item
         +b('div').review
-            +e('div').photo(style=`background-image: url('../${item.image}')`)
+            +e('div').photo(style=`background-image: url('${item.image}')`)
             +e('div').hover
                 +e('div').content
                     +e('div').title!= item.title
