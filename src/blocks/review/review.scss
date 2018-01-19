@@ -1,11 +1,29 @@
 $review: '.review';
 
+.touchevents {
+
+    @include respond-to('big') {
+        #{$review}__photo {
+            filter: none;
+        }
+
+        #{$review}__hover {
+            opacity:1;
+            transform: scale(1);
+        }
+    }
+}
+
 #{$review} {
     width: 100%;
     height: 100%;
     position: relative;
 
     &:hover {
+        #{$review}__photo {
+            filter: none;
+        }
+
         #{$review}__hover {
             opacity:1;
             transform: scale(1);
@@ -21,7 +39,6 @@ $review: '.review';
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
     }
 
@@ -31,7 +48,7 @@ $review: '.review';
         bottom: 0;
         right: 0;
         left: 0;
-        background: rgba(20, 20, 20, 0.7);
+        background: rgba(20, 20, 20, 0.5);
         transform: scale(.9);
         opacity: 0;
         transition: .7s;
