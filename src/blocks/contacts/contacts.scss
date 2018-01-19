@@ -39,12 +39,25 @@ $contacts: '.contacts';
         background-color: $color-white;
         border-radius: 8px;
         padding: 24px 40px;
+        z-index: 1;
+
+        @include respond-to('big') {
+            position: relative;
+            transform: none;
+            top: 0;
+            left: 0;
+            border-radius: 0;
+        }
     }
 
     &__info__pin {
         position: absolute;
         width: 25px;
         top: -5px;
+
+        @include respond-to('big') {
+            display: none;
+        }
 
         &_right {
             right: 5px;

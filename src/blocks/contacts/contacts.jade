@@ -7,7 +7,6 @@ block contacts
         +b('section').contacts(data-section="contacts")
             +e('h2').title!= contactsData.title
             +e('div').content
-                +map
                 +e('div').info
                     +e('div').info__pin(class='contacts__info__pin_right')
                         +e('img')(src='images/ico-pin-info.png')
@@ -18,3 +17,4 @@ block contacts
                     +e('ul').list
                         each item in contactsData.contactsList
                             +iconBlock(item)
+                +map

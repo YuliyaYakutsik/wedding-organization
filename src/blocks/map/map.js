@@ -61,7 +61,7 @@
                 center: {lat: 53.929847, lng: 27.576420},
                 styles: styleArray,
                 disableDefaultUI: true,
-                zoom: 14,
+                zoom: 13,
                 backgroundColor: 'rgba(24,105,218,.04)'
             });
             /*eslint-enable no-unused-vars*/

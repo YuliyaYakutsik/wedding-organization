@@ -81,7 +81,8 @@
     "path": [
       "./src/bower_components/matchHeight/dist/jquery.matchHeight.js",
       "./src/bower_components/owl.carousel/dist/owl.carousel.min.js",
-      "./src/bower_components/fancybox/dist/jquery.fancybox.min.js"
+      "./src/bower_components/fancybox/dist/jquery.fancybox.min.js",
+      "./modernizr.js"
     ]
   }
 }
